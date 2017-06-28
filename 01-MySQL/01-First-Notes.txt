@@ -1,0 +1,299 @@
+MySQL in “Cloud 9”
+
+In this class we will be using ” Cloud-9 ” and latter we will be installing in Linux.
+
+Note: read the following Article-Link, there explains that some of the commands that you will use in “Cloud 9” when using MySQL, are not real MySQL command but some commands that they program in the dev-environment just remember that when using MySQL in your Local-Machine few commands could be different.
+
+Cloud-9: MySQL Starting Commands:
+
+
+mysql-ctl start;  // Will CREATE an empty database.
+mysql-ctl cli;    // Will run the MySQL interactive shell.
+exit;             // Will exit the interactive shell.
+mysql-ctl stop;   // Will stop MySQL.
+
+mysql-ctl start;  // Will CREATE an empty database.
+mysql-ctl cli;    // Will run the MySQL interactive shell.
+exit;             // Will exit the interactive shell.
+mysql-ctl stop;   // Will stop MySQL.
+
+
+More SQL Commands:
+
+
+CREATE DATABASE employees_db;  // creates a database;
+DROP DATABASE employees_db;    // Deletes the database and leaves NULL in use;
+USE students_db;    // specify a database to use, in the example we command to use students_db;
+SELECT database();  // informs you of what database is currently in use;
+show databases;     // will show all databases on current project;
+
+CREATE DATABASE employees_db;  // creates a database;
+DROP DATABASE employees_db;    // Deletes the database and leaves NULL in use;
+USE students_db;    // specify a database to use, in the example we command to use students_db;
+SELECT database();  // informs you of what database is currently in use;
+show databases;     // will show all databases on current project;
+Tables:
+
+Columns = ( headers );
+Rows = ( the actual data );
+Data Types: for a complete list see Docs, but for this moment we will use only two;
+
+INT: For whole numbers no decimals.
+VARCHAR: For strings with max 255 characterers.
+Here is an example on how to create a table:
+
+
+mysql> CREATE TABLE fast_cars
+    -> (
+    ->   make VARCHAR(100),
+    ->   model VARCHAR(100),
+    ->   year INT
+    -> );
+
+mysql> CREATE TABLE fast_cars
+    -> (
+    ->   make VARCHAR(100),
+    ->   model VARCHAR(100),
+    ->   year INT
+    -> );
+Table Commands
+
+
+SHOW TABLES;  // Will show the name of the tables in current DB.
+SHOW COLUMNS FROM <table_name>; // will shoe the data in the table.
+DESC <table_name>;  // almost same of: SHOW COLUMNS FROM <table_name>
+DROP TABLE <table_name>;  // Will delete the table.
+
+SHOW TABLES;  // Will show the name of the tables in current DB.
+SHOW COLUMNS FROM <table_name>; // will shoe the data in the table.
+DESC <table_name>;  // almost same of: SHOW COLUMNS FROM <table_name>
+DROP TABLE <table_name>;  // Will delete the table.
+In the following example I create a new table call players and then delete it
+
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_cars_db |
++-------------------+
+| fast_cars         |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE TABLE players(name VARCHAR(50), goals INT);
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_cars_db |
++-------------------+
+| fast_cars         |
+| players           |
++-------------------+
+2 rows in set (0.01 sec)
+
+mysql> DESC players;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(50) | YES  |     | NULL    |       |
+| goals | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DROP TABLE players;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_cars_db |
++-------------------+
+| fast_cars         |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_cars_db |
++-------------------+
+| fast_cars         |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE TABLE players(name VARCHAR(50), goals INT);
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_cars_db |
++-------------------+
+| fast_cars         |
+| players           |
++-------------------+
+2 rows in set (0.01 sec)
+
+mysql> DESC players;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(50) | YES  |     | NULL    |       |
+| goals | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DROP TABLE players;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_cars_db |
++-------------------+
+| fast_cars         |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql>
+Inserting data in to the Tables:
+
+For this example I recreated the TABLE players now lest put data inside, the command to do so is:
+
+
+INSERT INTO <table_name>(header_1, header_2) VALUES (data-1, data-2);  // example in how to input data.
+
+SELECT * FROM <table_name>;    // Will show the data on the table.
+
+INSERT INTO <table_name>(header_1, header_2) VALUES (data-1, data-2);  // example in how to input data.
+
+SELECT * FROM <table_name>;    // Will show the data on the table.
+Now this is real example:
+
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_cars_db |
++-------------------+
+| fast_cars         |
+| players           |
++-------------------+
+2 rows in set (0.00 sec)
+
+mysql> DESC players;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(50) | YES  |     | NULL    |       |
+| goals | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO players(name, goals) VALUES ('Neymar', 4);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO players(name, goals) VALUES ('C. Ronaldo', 7);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM players;
++------------+-------+
+| name       | goals |
++------------+-------+
+| Neymar     |     4 |
+| C. Ronaldo |     7 |
++------------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_cars_db |
++-------------------+
+| fast_cars         |
+| players           |
++-------------------+
+2 rows in set (0.00 sec)
+
+mysql> DESC players;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(50) | YES  |     | NULL    |       |
+| goals | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO players(name, goals) VALUES ('Neymar', 4);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO players(name, goals) VALUES ('C. Ronaldo', 7);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM players;
++------------+-------+
+| name       | goals |
++------------+-------+
+| Neymar     |     4 |
+| C. Ronaldo |     7 |
++------------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
+You can insert and delete by BULK, example in our players table.
+
+
+mysql> SELECT * FROM players;
++------------+-------+
+| name       | goals |
++------------+-------+
+| Neymar     |     4 |
+| C. Ronaldo |     7 |
++------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO players(name, goals) VALUES
+    -> ('Messi', 5), ('Villa', 3), ('Palencia', 5);   // Bulk inserting.
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM players;
++------------+-------+
+| name       | goals |
++------------+-------+
+| Neymar     |     4 |
+| C. Ronaldo |     7 |
+| Messi      |     5 |
+| Villa      |     3 |
+| Palencia   |     5 |
++------------+-------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM players;
++------------+-------+
+| name       | goals |
++------------+-------+
+| Neymar     |     4 |
+| C. Ronaldo |     7 |
++------------+-------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO players(name, goals) VALUES
+    -> ('Messi', 5), ('Villa', 3), ('Palencia', 5);   // Bulk inserting.
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM players;
++------------+-------+
+| name       | goals |
++------------+-------+
+| Neymar     |     4 |
+| C. Ronaldo |     7 |
+| Messi      |     5 |
+| Villa      |     3 |
+| Palencia   |     5 |
++------------+-------+
+5 rows in set (0.00 sec)
+if you ever get a feed back with the word “warning” you can request the computer to show you the warnings with:  $ SHOW WARNINGS;
+
+-------------------------------------------------------------------------------------------------------
