@@ -1,0 +1,14 @@
+body{
+  background-color: lavender;
+  text-align: center;
+}
+
+.img1{
+  width: 440px;
+  height: 160px;
+}
+
+.nameHolder{
+  border: 1px solid black;
+  padding: 10px;
+}
