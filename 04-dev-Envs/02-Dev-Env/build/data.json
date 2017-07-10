@@ -1,0 +1,16 @@
+{
+  "bands": [
+    {
+      "name": "Paramore", "members": 3
+    },
+    {
+      "name": "Linking Park", "members": 7}
+      ,
+    {
+      "name": "Bon Jovi", "members": 5
+    },
+    {
+      "name": "Guns & Rouses", "members": 4
+    }
+  ]
+}

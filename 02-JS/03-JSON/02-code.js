@@ -1,4 +1,5 @@
 
+var output = "";
 var people = [
   {name: "Ayumi", age: 38},
   {name: "Hyolin", age: 27},
@@ -6,7 +7,6 @@ var people = [
   {name: "Fey", age: 43}
 ];
 
-var output = "";
 
 for(x = 0; x < people.length; x++){
   output += "<p>" + people[x].name + " is: " + people[x].age + " years old." + "</p>"
