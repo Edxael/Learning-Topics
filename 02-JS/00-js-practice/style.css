@@ -1,0 +1,28 @@
+body{
+  background-color: lavender;
+  text-align: center;
+}
+
+.srange{
+  background:gray;
+  width:200px;
+  height:200px;
+
+  cursor: url(IMG/si2.png), auto;
+
+}
+
+.zom1{
+  width: 90px;
+  height: 150px;
+}
+
+.zom2{
+  width: 181px;
+  height: 300px;
+}
+
+.zom3{
+  width: 363px;
+  height: 600px;
+}
