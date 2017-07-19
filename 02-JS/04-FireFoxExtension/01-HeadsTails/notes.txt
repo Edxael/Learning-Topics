@@ -1,0 +1,4 @@
+
+debuggin address in FireFoxBrowser: about:debugging
+
+Click: Load Temporaty Add-on

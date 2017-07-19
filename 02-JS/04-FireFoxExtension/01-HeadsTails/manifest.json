@@ -1,0 +1,18 @@
+{
+  "manifest_version": 1,
+  "name": "Coin Flipper",
+  "version": "1.0",
+
+  "description": "Flip a coin to make a desition.",
+
+  "icons": { "48": "icons/letter.png"
+},
+
+"content_scripts": [
+  {
+    "matches": ["*://joshmacdonald.net/*"],
+    "js": ["borderify.js"]
+  }
+]
+
+}
