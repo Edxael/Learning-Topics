@@ -11,7 +11,7 @@ class InviteConstructor{
 }
 
 
-function addRecord(){
+const addRecord = () => {
   const data1 = document.getElementById("in-1").value;
   const data2 = document.getElementById("in-2").value;
   const data3 = document.getElementById("in-3").value;
