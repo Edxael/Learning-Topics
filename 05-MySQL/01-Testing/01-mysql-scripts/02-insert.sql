@@ -4,9 +4,8 @@
 
 INSERT INTO web_dev(fname, lname, age)
     VALUES
-        ('Ayumi', 'Hamasaki', 22),
-        ('Laura', 'Pausini', 18),
-        ('Eros', 'Ramazzoti', 20);
+        ('Koda', 'Kumi', 21),
+        ('Tatiana', 'Tamalony', 20);
 
 
 -- SELECT * FROM web_dev;
