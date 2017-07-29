@@ -1,0 +1,31 @@
+
+this is a free course that I found on YouTube;
+
+https://www.youtube.com/playlist?list=PLUoqTnNH-2Xz_BUrjcahKWDhPcUj-FTOt
+
+------------------------------------------------------------------------------------------
+How to install with NPM 
+
+https://v4-alpha.getbootstrap.com/getting-started/download/
+
+Package managers
+Pull in Bootstrap’s source files into nearly any project with some of the most popular package managers. No matter the package manager, Bootstrap will require a Sass compiler, Autoprefixer, and postcss-flexbugs-fixes for a setup that matches our official compiled versions.
+
+npm
+Install Bootstrap in your Node powered apps with the npm package:
+
+Copy
+npm install bootstrap@4.0.0-alpha.6
+require('bootstrap') will load all of Bootstrap’s jQuery plugins onto the jQuery object. The bootstrap module itself does not export anything. You can manually load Bootstrap’s jQuery plugins individually by loading the /js/*.js files under the package’s top-level directory.
+
+Bootstrap’s package.json contains some additional metadata under the following keys:
+
+sass - path to Bootstrap’s main Sass source file
+style - path to Bootstrap’s non-minified CSS that’s been precompiled using the default settings (no customization)
+
+---------------------------------------------------------------------------------------
+
+
+
+
+really good.
