@@ -7,6 +7,7 @@ var ejs = require('ejs');
 var body_parser = require('body-parser');
 var morgan = require('morgan');
 var ejs_mate = require('ejs-mate');
+var ejsLayouts = require('express-ejs-layouts')
 
 
 
@@ -30,7 +31,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/ayu', function(req, res){
-  res.render('main/ayu')
+  res.render('ayu')
 });
 
 app.get('/koda', function(req, res){
