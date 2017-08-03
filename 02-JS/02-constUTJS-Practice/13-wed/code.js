@@ -35,3 +35,9 @@ s
     },4000);
   }
 }
+
+
+function login(){
+  console.log("Log In.");
+  
+}
