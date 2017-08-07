@@ -1,0 +1,27 @@
+
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<--- Body ---> 
+
+  <br>
+
+    <ul class="nav nav-pills tabs1">
+      <li role="presentation" class="myButton active"><a href="/">Ayumi</a></li>
+      <li role="presentation" class="myButton"><a href="bp">BlackPink</a></li>
+      <li role="presentation" class="myButton"><a href="st">Sistar</a></li>
+      <li role="presentation" class="myButton"><a href="md">Mad Clown</a></li>
+      <li role="presentation" class="myButton"><a href="sy">Soyu</a></li>
+    </ul>
+
+    <hr class="bar1">
+
+    <h1>Ayumi Hamasaki</h1>
+    <img src="img/ayu1.jpg" alt="Missing Picture" class="bor1"><br><br>
+    <iframe class="bor1" width="560" height="315" src="https://www.youtube.com/></iframe>
+
+    <hr class="bar1">
+    <p>by: Edmundo Rubio</p>
+
+<--- Body ---> 

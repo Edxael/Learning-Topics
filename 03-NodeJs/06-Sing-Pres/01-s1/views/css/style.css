@@ -1,0 +1,22 @@
+body{
+  background-color: rgb(118, 168, 157);
+  text-align: center;
+}
+
+.tabs1{
+  display:inline-block;
+}
+
+.bar1{
+  height: 7px;
+  width: 50vw;
+  background-color: black;
+}
+
+.bor1{
+  border: 5px solid lavender;
+}
+
+.btbg{
+  background-color: rgb(179, 171, 246);
+}

@@ -1,0 +1,22 @@
+body{
+  background-color: gray;
+  text-align: center;
+}
+
+.mynav1{
+  display: inline-block;
+}
+
+.btn1{
+  background-color: rgb(134, 198, 215);
+}
+
+.bar1{
+  height: 7px;
+  width: 50vw;
+  background-color: white;
+}
+
+.bor1{
+  border: 3px solid white;
+}
