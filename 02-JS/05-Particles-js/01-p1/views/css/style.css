@@ -1,0 +1,16 @@
+body{
+  background-color: aquamarine;
+  text-align: center;
+  padding: 7px;
+}
+
+.pill-bg{
+  background-color: rgb(183, 181, 255);
+  /*margin: 4px;*/
+  border: 1px solid black;
+}
+
+
+.menu1{
+  display: inline-block;
+}

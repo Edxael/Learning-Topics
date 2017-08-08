@@ -1,0 +1,29 @@
+body{
+  background-color: gray;
+  text-align: center;
+  padding: 7px;
+}
+
+
+.bor1{
+  border: 3px solid white;
+}
+
+.menu1{
+  display: inline-block;
+}
+
+.btn1{
+  background-color: aquamarine;
+}
+
+.ln1{
+  height: 7px;
+  width: 50vw;
+  background-color: white;
+}
+
+p{
+  width: 850px;
+  display: inline-block;
+}
